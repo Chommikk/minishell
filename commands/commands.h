@@ -24,5 +24,5 @@ int	ft_env(t_data *data);
 // the env variables except the given one which will be freed
 // and modifies the given argument 
 int		ft_unset(t_data *data, char *variable);
-int	ft_export(char ***envp, char *variable);
+int	ft_export(t_data *data, char *arg);
 #endif
