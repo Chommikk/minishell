@@ -5,7 +5,7 @@
 
 int main(int argc, char **argv, char **envp)
 {
-	char	*str = ft_strdup("PATH");
+	// char	*str = ft_strdup("PATH");
 	char	*str2 = ft_strdup("PATH=hehe");
 	t_data	data[1];
 
