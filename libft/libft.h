@@ -21,6 +21,7 @@
 #include <string.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	**ft_coppyarrstr(char **arr);
 char	**ft_split(char const *s, char c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
@@ -57,6 +58,8 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
+// takes adress null terminated pointer to array of malloced pointers 
+// frees all pointers in array and the pointer of the master array and sets it to NULL
 void	free_arr(void ***arr);
 
 #endif

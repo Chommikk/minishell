@@ -5,6 +5,7 @@
 # include <unistd.h>
 # include <limits.h>
 # include <stdlib.h>
+# include "../minishell.h"
 
 // changes working directory to given path
 // works with absolute and relative paths
@@ -18,7 +19,10 @@ int	ft_pwd(void);
 // prints the given strint to stdout
 int	ft_echo(char *str, int flag);
 // prints given environment
-int	ft_env(char **envp);
-
-int		ft_unset(char ***envp, char *variable);
+int	ft_env(t_data *data);
+// takes adres of alocated array of alocated strings copies all of 
+// the env variables except the given one which will be freed
+// and modifies the given argument 
+int		ft_unset(t_data *data, char *variable);
+int	ft_export(char ***envp, char *variable);
 #endif
