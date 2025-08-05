@@ -9,7 +9,9 @@ PIPEX = binary_path.c\
 EXECFILES = haha.c
 COMMANDS = commands/cd.c\
 		   commands/com_main.c\
-		   commands/pwd.c
+		   commands/pwd.c\
+		   commands/env.c\
+		   commands/unset.c
 LIBFT = libft/ft_calloc.c\
 		libft/ft_putstr_fd.c\
 		libft/ft_split.c\
@@ -46,6 +48,6 @@ exec:
 	cc -Wall -Wextra $(EXECFILES) -g -o exec
 	
 com:
-	cc -Wall -Wextra $(COMMANDS) -g -o com
+	cc -Wall -Wextra $(COMMANDS) libft/*.c -g -o com
 
 .PHONY: re fclean clean all com
