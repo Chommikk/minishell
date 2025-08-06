@@ -8,8 +8,8 @@
 
 typedef struct s_data
 {
-	char **env;
-	int	rt;
+	char	**env;
+	int		rt;
 } t_data;
 
 #endif

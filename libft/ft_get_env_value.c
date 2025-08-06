@@ -13,7 +13,7 @@ char	*ft_get_env_value(char **arr, char *key)
 	{
 		if (ft_strnstr(arr[i], tmp, ft_strlen(tmp)))
 			return (free(tmp), ft_substr(arr[i],
-				(size_t)(ft_strchr(arr[i], '=') - arr[i]), ft_strlen(arr[i])));
+				(size_t)(ft_strchr(arr[i], '=') - arr[i]) + 1, ft_strlen(arr[i])));
 		i++;
 	}
 	return (free(tmp), ft_strdup(""));

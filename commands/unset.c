@@ -4,21 +4,20 @@
 static int	check_for_var(char ***envp, char **variable)
 {
 	size_t	i;
-	size_t	j;
 	char	*tmp;
 
 	i = 0;
-	j = 0;
 	tmp = ft_strjoin(*variable, "=");
 	if (tmp == NULL)
 		return (0);
 	while ((*envp)[i])
 	{
 		if (ft_strnstr((*envp)[i], tmp, ft_strlen(tmp)) == NULL)
-			j ++;
-		i ++;
+			i ++;
+		else
+			return (free(tmp), 1);
 	}
-	return (free(tmp), j);
+	return (free(tmp), 0);
 }
 
 int		ft_unset(t_data *data, char *variable)
@@ -34,7 +33,7 @@ int		ft_unset(t_data *data, char *variable)
 	tmp = ft_strjoin(variable, "=");
 	if (tmp == NULL)
 		return (0);
-	new = ft_calloc(sizeof(char*), j + 1);
+	new = ft_calloc(sizeof(char*), ft_arrlen((void **)data->env) - j);
 	if (new == NULL)
 		return (free(tmp), 0);
 	j = 0;

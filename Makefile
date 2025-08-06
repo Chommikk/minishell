@@ -21,7 +21,10 @@ LIBFT = libft/ft_calloc.c\
 		libft/ft_strlen.c\
 		libft/ft_strncmp.c\
 		libft/ft_strnstr.c\
-		libft/ft_substr.c
+		libft/ft_substr.c\
+		libft/ft_isalnum.c\
+		libft/ft_isalpha.c\
+		libft/ft_digit.c
 FILES = $(EXECFILES)
 OBJ = $(FILES:.c=.o)
 

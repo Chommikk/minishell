@@ -7,10 +7,10 @@ int	ft_pwd(void)
 
 	path = malloc(PATH_MAX);
 	if (path == NULL)
-		return (printf("malloc error \n"), 0);
+		return (printf("malloc error \n"), free(path), 0);
 	if (getcwd(path, PATH_MAX) == NULL)
-		return (printf("get_cwd error \n"), 0);
+		return (printf("get_cwd error \n"), free(path), 0);
 	if (printf("%s\n", path) == -1)
-		return (printf("printf_eror\n"), 0);
-	return (1);
+		return (printf("printf_eror\n"), free(path), 0);
+	return (free(path), 1);
 }

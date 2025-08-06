@@ -6,7 +6,7 @@
 /*   By: mchoma <mchoma@student.42vienna.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 09:26:29 by mchoma            #+#    #+#             */
-/*   Updated: 2025/04/29 09:26:32 by mchoma           ###   ########.fr       */
+/*   Updated: 2025/08/06 14:14:26 by mchoma           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <signal.h>
 #include <string.h>
 
+size_t	ft_arrlen(void **arr);
 char	*ft_get_env_value(char **arr, char *key);
 char	**ft_append_arr_str(char ***arr, char *str);
 char	*ft_strnstr(const char *big, const char *little, size_t len);

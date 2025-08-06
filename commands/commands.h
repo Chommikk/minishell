@@ -25,7 +25,7 @@ int	ft_env(t_data *data);
 // takes adres of alocated array of alocated strings copies all of 
 // the env variables except the given one which will be freed
 // and modifies the given argument 
-int		ft_unset(t_data *data, char *variable);
+int	ft_unset(t_data *data, char *variable);
 //takes malloced string as argument changes the env is string is correctly formated 
 //sets exit value in struct
 int	ft_export(t_data *data, char *arg);

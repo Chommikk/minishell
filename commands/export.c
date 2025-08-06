@@ -17,6 +17,7 @@ static int	arg_check(char *arg)
 			break;
 		if (!ft_isalnum(arg[i]) && !(arg[i] == '_'))
 			return (0);
+		i++;
 	}
 
 	return (1);
@@ -36,9 +37,11 @@ int	ft_export(t_data *data, char *arg)
 			0);
 	}
 	var = ft_substr(arg, 0, (size_t)(ft_strchr(arg, '=') - arg));
+	if (var == NULL)
+		return (free(arg), 0);
 	i = 0;
 	ft_unset(data, var);
 	if (ft_append_arr_str(&data->env, arg) == NULL)
-		return (0); //error
-	return (1);
+		return (free(arg), 0); //error
+	return (free(arg), 1);
 }
